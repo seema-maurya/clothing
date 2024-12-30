@@ -3,11 +3,6 @@ const router = express.Router();
 const db = require("../../db");
 const { ObjectId } = require("mongodb");
 const QRCode = require("qrcode");
-
-const AdminupiId = "9702359576@ptsbi";
-const name = "ASHISH RAJBALI MAURYA"; // Replace with your name
-const note = "Good Service";
-
 router.get("/generate-upi-link", async (req, res) => {
   try {
     const { amount } = req.query;
